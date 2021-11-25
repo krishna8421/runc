@@ -1,0 +1,9 @@
+while getopts f: flag
+do
+    case "${flag}" in
+        f) file=${OPTARG};;
+    esac
+done
+clear
+gcc $file -o /tmp/tempcexec
+/tmp/tempcexec
